@@ -1,0 +1,11 @@
+[Unit]
+Description=La meva aplicació Flask
+After=network.target
+[Service]
+User=jsensada
+WorkingDirectory=/opt/app
+ExecStart=/usr/bin/gunicorn -b :5002 app:app
+Restart=always
+[Install]
+WantedBy=multi-user.target
+
