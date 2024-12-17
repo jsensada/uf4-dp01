@@ -20,7 +20,7 @@ sudo cp app.py /opt/app/app.py
 sudo cp requirements.txt /opt/app/requirements.txt
 
 echo "--> Changing permissions:"
-sudo chown jsensada:jsensada -R /opt/app
+sudo chown $(whoami):$(whoami) -R /opt/app
 
 echo "--> Installing dependencies:"
 sudo pip3 install -r /opt/app/requirements.txt --break-system-packages --ignore-installed
